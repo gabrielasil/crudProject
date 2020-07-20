@@ -1,79 +1,37 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# CRUD Laravel
+> Gerenciamento de usuários
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Nesse projeto é possível realizar o gerenciamento de um banco de dados que contém usuários, podendo adicionar, visualizar, editar e remover os mesmos. Para cada usuário é necessário haver um nome, um email e uma senha. 
 
-## About Laravel
+## Instalação
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Para a execução do projeto, é preciso ter instalado o framework de PHP Laravel, o que pode ser feito com auxilio da ferramenta de gerenciamento [Composer](https://getcomposer.org/). Além disso, é necessário ter a ferramenta [xampp](https://www.apachefriends.org/pt_br/download.html) ou similar para criação de um servidor local. Após a instalação do laravel e execução do servidor, deve-se ir na pasta do repositório no Prompt de Comando e executar o seguinte:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```sh
+php artisan serve
+```
 
-## Learning Laravel
+Após a execução, será possível acessar o projeto pelo link http://localhost:8000/users
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Exemplo de uso
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Na tela inicial, para cadastrar um novo usuário é preciso clicar no botão de "Cadastrar", sendo redirecionado para a página de Cadastro. Nessa página, deve-se preencher os campos de Nome, Email e Senha, e se todas as condições estiverem satisfeitas, ao clicar em "Cadastrar", o usuário já será adicionado ao banco e listado na página inicial.
 
-## Laravel Sponsors
+Ao lado dos nomes dos usuários listados na página inicial, há as opções de "Visualizar", "Editar" e "Deletar". Na opção de "Visualizar", será redirecionado à uma nova página constando todas as informações do usuário informadas na hora do cadastro.  Na opção "Editar", será possível mudar todas essas informações. Por fim, na opção "Deletar", o usuário será apagado do banco, não sendo mais listado na página inicial.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Banco de Dados
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+Na página inicial, há um arquivo chamado "laravel.sql" contendo o banco de dados utilizado para execução do projeto, podendo ser importado para o phpmyadmin utilizando o xampp.
+Para serem realizados testes no projeto, é possível utilizar uma seed para gerar dados automaticamente na tabela usuários. Para isso, deve-se acessar a pasta do repositório no Prompt de Comando, e executar: 
 
-## Contributing
+```sh
+php artisan db:seed
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Informações
 
-## Code of Conduct
+Gabriela Melo Silva – [@Gabriela Melo Silva] gabrielamsilva02@gmail.com
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+https://github.com/gabrielasil/crudProject
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
